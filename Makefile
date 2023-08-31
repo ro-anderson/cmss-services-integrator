@@ -11,7 +11,8 @@ init: clean install test
 
 .PHONY: clean
 clean: ## Removes project virtual env
-	rm -rf .venv build dist **/*.egg-info .pytest_cache node_modules .coverage
+	rm -rf .venv build dist **/*.egg-info .pytest_cache node_modules .coverage; find . -name "__pycache__" -type d -exec rm -r {} \+
+
 
 .PHONY: install
 install: ## Install the project dependencies and pre-commit using Poetry.
