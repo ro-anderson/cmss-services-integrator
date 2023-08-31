@@ -1,0 +1,99 @@
+[tool.poetry]
+name = "web-services-integrator"
+version = "0.1.0"
+description = ""
+authors = ["Rodrigo Anderson <didier.rda@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[tool.poetry.group.lint.dependencies]
+flake8-bugbear = "^23.7.10"
+flake8-print = "^5.0.0"
+flake8-docstrings = "^1.7.0"
+flake8-annotations = "^3.0.1"
+isort = "^5.12.0"
+yamllint = "^1.32.0"
+bandit = "^1.7.5"
+black = "^23.7.0"
+pre-commit = "^3.3.3"
+commitizen = "^3.7.0"
+pyproject-flake8 = "^6.0.0.post1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 119
+target-version = ['py39']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.venv
+  | \.env
+  | cdk.out
+  | \.vscode
+  | build
+  | dist
+  | \.mypy_cache
+)\
+'''
+
+[tool.isort]
+profile = 'black'
+force_single_line = true
+combine_as_imports = true
+lines_between_types = 1
+lines_after_imports = 2
+src_paths = ["src", "tests"]
+line_length = 119
+
+[tool.flake8]
+max-line-length = 119
+select = [  # Choose the flake8 errors to select globally here
+  "C",      # McCabe complexity
+  "E",      # pep8 errors
+  "W",      # pep8 warnings
+  "F",      # pyflakes errors
+  "N",      # naming conventions
+  "B",      # bugbear errors (needs plugin installed)
+  "ANN",    # flake8 annotations errors (needs plugin installed)
+  "T",      # flake8 print errors (needs plugin installed)
+  "D",      # flake8 doscstrings errors (needs plugin installed)
+  "B950",   #  Line too long. It considers "max-line-length" but only triggers when exceeded by more than 10%.
+]
+ignore = [   # Choose the flake8 errors to ignore globally here
+  "E501",    # Line too long  (using B950 instead, which has 10% tolerance)
+  "D107",    # Missing docstring in __init__
+  "D202",    # No blank lines allowed after function docstring
+  "D400",    # First line should end with a period
+  "D100",    # Missing docstring in public module
+  "D104",    # Missing docstring in public package
+  "ANN003",  # Missing type annotation for **kwargs
+  "ANN002",  # Missing type annotation for **args
+  "ANN1",    # Missing type annotation for self in methot or cls method
+]
+per-file-ignores = [     # Choose the flake8 errors to ignore per file here
+  "*/__init__.py:F401",  # Ignore imported but unused in __init__.py files
+  "tests/*:ANN,D",       # Ignore Docstring and annotations on tests
+]
+exclude = [
+    ".venv/*",
+    ".vscode/*",
+    "cdk.out/*",
+]
+# See other flake8 extensions here: https://github.com/DmytroLitvinov/awesome-flake8-extensions
+
+[tool.bandit]
+skips = [      # Choose the bandit errors to ignore globally
+  "B101"       # Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+]
+exclude_dirs = [
+  ".venv",
+  "cdk.out",
+]
