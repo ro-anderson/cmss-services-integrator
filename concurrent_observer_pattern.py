@@ -58,7 +58,8 @@ class Subject:
         """Run method"""
         print("Starting server...")  # noqa T201
 
-        # Spinning up a new thread to notify observers while the server "does its thing"
+        # Spinning up a new thread to notify observers while the server continues its processing tasks.
+
         notify_thread = threading.Thread(target=self.notify_observers, args=("New data available",))
         notify_thread.start()
 
