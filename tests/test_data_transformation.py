@@ -1,6 +1,6 @@
 import pytest
 
-from data_transformation.main import main
+from main import main
 
 
 # Test data
