@@ -6,6 +6,7 @@ from main import main
 # Test data
 test_data = [
     ("add", 5, 3, 8),
+    ("add", 5.4, 3, 8.4),
     ("add", -1, 3, 2),
     ("add", 0, 0, 0),
     ("subtract", 5, 3, 2),

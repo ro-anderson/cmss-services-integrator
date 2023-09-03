@@ -5,7 +5,7 @@ from typing import Union
 from data_transformation.utils.data_transformer import DataTransformer
 
 
-def main(function_name: str, var1: Union[str, int], var2: Optional[Union[str, int]] = None) -> Any:  # noqa ANN401
+def main(function_name: str, var1: Union[str, float], var2: Optional[Union[str, float]] = None) -> Any:  # noqa ANN401
     """
     Execute the data transformation using the provided function name.
 
