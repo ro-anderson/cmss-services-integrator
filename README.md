@@ -19,40 +19,40 @@ This project dives deep into the intricacies and potential techniques of integra
 
 ```
 .
-├── Makefile
-├── README.md
-├── concurrent_notifier
+├── Makefile                              # Automation scripts for building and testing
+├── README.md                             # Project documentation and setup guide
+├── concurrent_notifier                   # Concurrent notifier library
 │   ├── __init__.py
-│   ├── observer.py
-│   ├── subject.py
+│   ├── observer.py                       # Observer implementation for the pattern
+│   ├── subject.py                        # Subject implementation for the pattern
 │   └── utils
 │       ├── __init__.py
-│       └── threading_utils.py
-├── concurrent_observer_pattern.py
-├── data_transformation
+│       └── threading_utils.py            # Utility functions for multithreading
+├── concurrent_observer_pattern.py        # Demonstration of the observer pattern
+├── data_transformation                   # Data transformation library
 │   ├── __init__.py
 │   ├── strategies
 │   │   ├── __init__.py
-│   │   ├── add_strategy.py
-│   │   ├── base_strategy.py
-│   │   ├── subtract_strategy.py
-│   │   └── to_lowercase_strategy.py
+│   │   ├── add_strategy.py               # Strategy to add numbers
+│   │   ├── base_strategy.py              # Base strategy class
+│   │   ├── subtract_strategy.py          # Strategy to subtract numbers
+│   │   └── to_lowercase_strategy.py      # Strategy to convert strings to lowercase
 │   └── utils
 │       ├── __init__.py
-│       └── data_transformer.py
+│       └── data_transformer.py           # Transformer utility using strategies
 ├── docs
 │   └── diagrams
 │       └── images
-│           └── cmms_integration_architecture.png
-├── images
-├── main.py
-├── poetry.lock
-├── pyproject.toml
-├── tests
+│           └── cmms_integration_architecture.png  # Integration architecture diagram
+├── images                                # Directory for miscellaneous images
+├── main.py                               # Main execution file
+├── poetry.lock                           # Lock file for dependencies (used by Poetry)
+├── pyproject.toml                        # Python project metadata and dependencies
+├── tests                                 # Unit tests directory
 │   ├── __init__.py
-│   ├── test_data_transformation.py
-│   └── test_main.py
-└── to_be_optimized.py
+│   ├── test_data_transformation.py       # Tests for data transformation functions
+│   └── test_main.py                      # Main test file
+└── to_be_optimized.py                    # Sample code for optimization
 ```
 
 ## Getting Started
