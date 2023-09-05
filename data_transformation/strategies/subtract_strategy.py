@@ -2,7 +2,7 @@ from data_transformation.strategies.base_strategy import TransformationStrategy
 
 
 class SubtractStrategy(TransformationStrategy):
-    """Strategy for adding two numbers."""
+    """Strategy for subtract two numbers."""
 
     def transform(self, var1: float, var2: float) -> float:
         """
