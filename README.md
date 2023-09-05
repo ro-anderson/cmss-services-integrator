@@ -57,7 +57,7 @@ This project dives deep into the intricacies and potential techniques of integra
 
 ## Getting Started
 
-1. **Clone the Repository;
+1. **Clone the Repository**;
 
 2. **Install Dependencies:**
 
