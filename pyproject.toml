@@ -26,6 +26,7 @@ pyproject-flake8 = "^6.0.0.post1"
 [tool.poetry.group.test.dependencies]
 pytest-cov = "^4.1.0"
 pytest = "^7.4.0"
+pytest-catchlog = "^1.2.2"
 
 
 [tool.poetry.group.design.dependencies]
