@@ -2,7 +2,7 @@
 
 Before diving deep into the solution, it's essential to highlight that this architecture seamlessly incorporates two pivotal components:
 
-1. **Data Transformation Library**: The [data_transformation](../../data_transformation) library, which we delved into in Task 2, forms a backbone for this system. It caters to the data transformation requirements of the architecture, ensuring data consistency and appropriateness for various ERPs.
+1. **Data Transformation Library**: The [data_transformation](../data_transformation) library, which we delved into in Task 2, forms a backbone for this system. It caters to the data transformation requirements of the architecture, ensuring data consistency and appropriateness for various ERPs.
 
 2. **Concurrent Notifier Library**: This architecture integrates the concept of the [concurrent_notifier](../../concurrent_notifier) library, as laid out in Task 1. While we haven't expanded on the complete implementation of this library, its foundational idea plays a pivotal role. The Concurrent Notifier is represented as a skeleton in this system, emphasizing its conceptual application rather than a full-fledged execution.
 
