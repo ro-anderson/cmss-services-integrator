@@ -42,12 +42,10 @@ This project dives deep into the intricacies and potential techniques of integra
 │       └── data_transformer.py
 ├── docs
 │   └── diagrams
-│       ├── cmms_integration_architecture.py
 │       └── images
 │           └── cmms_integration_architecture.png
 ├── images
 ├── main.py
-├── poetry-installer-error-3yosw0d3.log
 ├── poetry.lock
 ├── pyproject.toml
 ├── tests
