@@ -16,7 +16,7 @@ clean: ## Removes project virtual env
 
 .PHONY: install
 install: ## Install the project dependencies and pre-commit using Poetry.
-	poetry install --with lint
+	poetry install --with lint,test,design
 	poetry run pre-commit install --hook-type pre-commit --hook-type commit-msg --hook-type pre-push
 
 .PHONY: test

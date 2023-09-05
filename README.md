@@ -1,25 +1,60 @@
-# Web Services Integrator
+# CMMS System Integrator
 
-A study project focusing on web service integration using Python.
+A detailed exploration into the integration of Computerized Maintenance Management Systems (CMMS) using Python.
 
 ## Overview
 
-This repository is a deep dive into the complexities and potential solutions for integrating with various web services. The project addresses optimization tasks, Python function developments, and a design proposal for a component architecture.
+This project dives deep into the intricacies and potential techniques of integrating with various CMMS services. It showcases optimization tasks, the development of Python functions, and a proposal for a component architecture that can be adopted for similar integrations.
+
+## Performed Tasks
+
+1. **[Code Optimization](./docs/code_optimization.md):** Dive into the provided code in `to_be_optimized.py` to understand its operations and explore avenues for optimization.
+
+2. **[Data Transformation Functions](./docs/data_transformation_functions.md):** Develop and understand Python functions for various data transformation operations and design a main function to invoke them.
+
+3. **[Component Architecture Design](./docs/component_architecture_design.md):** Delve into creating an efficient design to integrate with web services, exploring its limitations and features.
+
 
 ## Repository Structure
 
 ```
 .
-├── Makefile             # Make commands for project operations
-├── README.md            # Overview and instructions for the project
-├── poetry.lock          # Dependency versions lock file
-├── pyproject.toml       # Project metadata and dependencies
-├── src                  # Source code directory
-│   ├── __init__.py      # Package initializer
-│   └── main.py          # Main module containing solution functions
-├── tests                # Unit tests directory
-│   └── test_main.py     # Unit tests for the main.py module
-└── to_be_optimized.py   # Initial provided code for optimization task
+├── Makefile
+├── README.md
+├── concurrent_notifier
+│   ├── __init__.py
+│   ├── observer.py
+│   ├── subject.py
+│   └── utils
+│       ├── __init__.py
+│       └── threading_utils.py
+├── concurrent_observer_pattern.py
+├── data_transformation
+│   ├── __init__.py
+│   ├── strategies
+│   │   ├── __init__.py
+│   │   ├── add_strategy.py
+│   │   ├── base_strategy.py
+│   │   ├── subtract_strategy.py
+│   │   └── to_lowercase_strategy.py
+│   └── utils
+│       ├── __init__.py
+│       └── data_transformer.py
+├── docs
+│   └── diagrams
+│       ├── cmms_integration_architecture.py
+│       └── images
+│           └── cmms_integration_architecture.png
+├── images
+├── main.py
+├── poetry-installer-error-3yosw0d3.log
+├── poetry.lock
+├── pyproject.toml
+├── tests
+│   ├── __init__.py
+│   ├── test_data_transformation.py
+│   └── test_main.py
+└── to_be_optimized.py
 ```
 
 ## Getting Started
@@ -39,11 +74,3 @@ make init
 ```bash
 make test
 ```
-
-## Study Focus
-
-1. **Code Optimization:** Dive into the provided code in `to_be_optimized.py` to understand its operations and explore avenues for optimization.
-
-2. **Data Transformation Functions:** Develop and understand Python functions for various data transformation operations and design a main function to invoke them.
-
-3. **Component Architecture Design:** Delve into creating an efficient design to integrate with web services, exploring its limitations and features.
